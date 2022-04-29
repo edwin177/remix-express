@@ -7,9 +7,9 @@
   "scripts": {
     "build": "remix build",
     "dev": "remix build && run-p dev:*",
-    "dev:node": "cross-env NODE_ENV=development nodemon ./server.js --watch ./server.js",
+    "dev:node": "cross-env NODE_ENV=development nodemon ./src/express/server.js --watch ./src/express/server.js",
     "dev:remix": "remix watch",
-    "start": "cross-env NODE_ENV=production node ./server.js"
+    "start": "cross-env NODE_ENV=production node ./src/express/server.js"
   },
   "dependencies": {
     "@remix-run/express": "^1.4.3",
