@@ -32,12 +32,12 @@ app.all(
         purgeRequireCache();
 
         return createRequestHandler({
-          build: require(BUILD_DIR),
+          build: require("@remix-run/dev/server-build"),
           mode: process.env.NODE_ENV,
         })(req, res, next);
       }
     : createRequestHandler({
-        build: require(BUILD_DIR),
+        build: require("@remix-run/dev/server-build"),
         mode: process.env.NODE_ENV,
       })
 );
